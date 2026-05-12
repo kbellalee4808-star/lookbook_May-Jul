@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1A1612">
+<title>60일 크루즈 패킹 가이드 · Bella's 22 Pieces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F4EFE8; --bg-warm: #EAE2D4; --paper: #FFFFFF;
+  --ink: #1A1612; --ink-mid: #3A3329; --ink-soft: #6B6055;
+  --hairline: #D8CFC1; --gold: #B89860; --navy: #1B3A5C;
+  --cream: #F0E7D6; --camel: #C9A87C; --burgundy: #6B2737;
+  --olive: #6B7048; --red: #A33A3A; --terracotta: #B86B4B;
+  --coral: #D88068; --navy-deep: #112540;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans KR', 'DM Sans', sans-serif;
+  background: var(--bg); color: var(--ink); line-height: 1.65;
+  word-break: keep-all; -webkit-font-smoothing: antialiased;
+  padding-bottom: env(safe-area-inset-bottom);
+  font-size: 15px;
+}
+img { display: block; max-width: 100%; height: auto; }
+section[id] { scroll-margin-top: 70px; }
+
+.overline { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; color: var(--gold); }
+
+/* NAV */
+.topnav { position: sticky; top: 0; z-index: 100; background: rgba(244, 239, 232, 0.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--hairline); padding: env(safe-area-inset-top) 0 0; }
+.topnav-inner { display: flex; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 12px 20px; gap: 6px; }
+.topnav-inner::-webkit-scrollbar { display: none; }
+.topnav a { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 38px; padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--ink-mid); text-decoration: none; border-radius: 999px; transition: all 0.2s; white-space: nowrap; cursor: pointer; }
+.topnav a:hover, .topnav a.active { background: var(--ink); color: var(--bg); }
+
+/* HERO */
+.hero { position: relative; overflow: hidden; }
+.hero-image { width: 100%; height: 460px; object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,22,18,0.2) 0%, rgba(26,22,18,0.45) 55%, rgba(26,22,18,0.88) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 40px 24px 36px; color: #fff; }
+.hero .kicker { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.95); margin-bottom: 16px; font-weight: 700; }
+.hero .kicker .dot { display: inline-block; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; margin: 0 8px; vertical-align: middle; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 13vw, 72px); font-weight: 600; line-height: 0.96; letter-spacing: -0.02em; margin-bottom: 16px; color: #fff; }
+.hero h1 .accent { color: var(--gold); }
+.hero .subtitle { font-family: 'Noto Sans KR', sans-serif; font-size: 15px; color: rgba(255,255,255,0.9); margin-bottom: 28px; font-weight: 500; line-height: 1.5; }
+.hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.2); }
+.hero-stat .num { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 8vw, 42px); font-weight: 600; line-height: 1; color: #fff; }
+.hero-stat .lbl { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 6px; font-weight: 600; }
+
+/* SECTION HEADERS */
+section { padding: 64px 20px 50px; }
+.section-head { text-align: center; max-width: 600px; margin: 0 auto 40px; }
+.section-head h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 9vw, 48px); font-weight: 600; line-height: 1.05; margin: 12px 0 14px; letter-spacing: -0.01em; }
+.section-head h2 .accent { color: var(--gold); }
+.section-head .subtitle { font-size: 14.5px; color: var(--ink-mid); line-height: 1.6; }
+
+/* STRATEGY */
+.strategy { background: var(--bg-warm); }
+.principles { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 16px; }
+.principle { background: var(--paper); padding: 26px 24px; border-radius: 12px; border: 1px solid var(--hairline); position: relative; }
+.principle .num { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+.principle h3 { font-family: 'Noto Sans KR', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--ink); }
+.principle p { font-size: 14.5px; color: var(--ink-mid); line-height: 1.65; }
+
+/* PHOTO BREAK */
+.photo-break { position: relative; height: 320px; overflow: hidden; padding: 0; }
+.photo-break img { width: 100%; height: 100%; object-fit: cover; }
+.photo-break-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,22,18,0.25) 0%, rgba(26,22,18,0.55) 100%); display: flex; align-items: center; justify-content: center; padding: 40px 24px; }
+.photo-break-text { max-width: 500px; text-align: center; color: #fff; }
+.photo-break-text .overline { color: var(--gold); }
+.photo-break-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 8vw, 38px); font-weight: 600; line-height: 1.15; margin-top: 12px; color: #fff; }
+
+/* CAPSULE - 15 PIECES */
+.capsule { background: var(--bg); }
+.category-group { max-width: 700px; margin: 0 auto 28px; }
+.category-label { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--ink); margin-bottom: 14px; padding: 0 2px; display: flex; align-items: center; gap: 10px; }
+.category-label::before, .category-label::after { content: ''; flex: 1; height: 1px; background: var(--hairline); }
+.category-label .label-text { display: flex; align-items: center; gap: 8px; }
+.category-label .count { color: var(--gold); font-weight: 700; }
+.piece-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.piece-card { background: var(--paper); border-radius: 12px; border: 1px solid var(--hairline); padding: 18px 16px 16px; position: relative; overflow: hidden; transition: transform 0.2s; }
+.piece-swatch { height: 80px; border-radius: 8px; margin-bottom: 14px; position: relative; display: flex; align-items: center; justify-content: center; font-size: 32px; }
+.piece-name-en { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; line-height: 1.15; margin-bottom: 2px; color: var(--ink); letter-spacing: -0.01em; }
+.piece-name-kr { font-size: 12px; color: var(--ink-soft); margin-bottom: 10px; font-weight: 500; }
+.piece-uses { display: flex; align-items: center; gap: 6px; padding-top: 10px; border-top: 1px solid var(--hairline); }
+.piece-uses .icon { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--gold); }
+.piece-uses .label { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 0.1em; color: var(--ink-soft); text-transform: uppercase; font-weight: 600; }
+.piece-card.hero-piece { grid-column: span 2; }
+.piece-card.hero-piece .piece-swatch { height: 110px; font-size: 42px; }
+.piece-card.hero-piece .piece-name-en { font-size: 22px; }
+.piece-card.hero-piece .piece-detail { font-size: 13px; color: var(--ink-mid); margin: 10px 0 4px; line-height: 1.55; }
+
+/* SUITCASE 50/50 */
+.suitcase-sec { background: var(--bg); }
+.suitcase { max-width: 700px; margin: 0 auto 24px; background: var(--paper); border: 2px dashed var(--gold); border-radius: 18px; overflow: hidden; }
+.suitcase-handle { background: var(--gold); height: 10px; }
+.suitcase-body { display: grid; grid-template-columns: 1fr; }
+.suitcase-half { padding: 24px 22px; position: relative; }
+.suitcase-half.clothes { background: linear-gradient(135deg, #FAFAF6 0%, #F0E7D6 100%); border-bottom: 1px dashed var(--gold); }
+.suitcase-half.other { background: linear-gradient(135deg, #F4EFE8 0%, #EAE2D4 100%); }
+.half-label { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.half-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: var(--gold); line-height: 1; }
+.half-title { flex: 1; }
+.half-title h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; line-height: 1.15; margin-bottom: 2px; }
+.half-title .sub { font-size: 12px; color: var(--ink-soft); font-weight: 500; }
+.half-list { list-style: none; padding: 0; }
+.half-list li { padding: 7px 0; font-size: 14px; color: var(--ink-mid); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+.half-list li .emo { font-size: 18px; flex-shrink: 0; width: 22px; }
+.half-list li strong { color: var(--ink); font-weight: 700; }
+
+.worn-on-plane { max-width: 700px; margin: 0 auto; background: var(--navy); color: #F4EFE8; padding: 24px 22px; border-radius: 14px; }
+.worn-on-plane .worn-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.worn-on-plane .worn-emoji { font-size: 28px; }
+.worn-on-plane h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #fff; line-height: 1.15; }
+.worn-on-plane .worn-sub { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; font-weight: 500; }
+.worn-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
+.worn-list li { padding: 6px 0; font-size: 13.5px; color: rgba(255,255,255,0.9); display: flex; align-items: center; gap: 8px; }
+.worn-list li::before { content: '✓'; color: var(--gold); font-weight: 700; font-size: 14px; }
+
+/* MIX & MATCH */
+.matchup { background: var(--bg-warm); }
+.match-list { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 14px; }
+.match-card { background: var(--paper); border-radius: 12px; border: 1px solid var(--hairline); padding: 22px 22px 20px; }
+.match-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--hairline); }
+.match-icon { width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+.match-title { flex: 1; }
+.match-title h3 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 600; line-height: 1.1; margin-bottom: 2px; }
+.match-title .sub { font-size: 12px; color: var(--ink-soft); font-weight: 500; }
+.match-count-big { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; color: var(--gold); line-height: 1; }
+.match-count-big small { display: block; font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.18em; color: var(--ink-soft); text-transform: uppercase; font-weight: 700; margin-top: 4px; }
+.combos { display: grid; grid-template-columns: 1fr; gap: 8px; }
+.combo { display: flex; align-items: center; gap: 10px; padding: 9px 0; font-size: 14px; color: var(--ink-mid); line-height: 1.45; }
+.combo-num { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 700; color: var(--gold); min-width: 18px; }
+.combo-text strong { color: var(--ink); font-weight: 600; }
+
+/* OCCASION */
+.occasion { background: var(--bg); }
+.occasion-grid { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 14px; }
+.occasion-card { background: var(--paper); border-radius: 12px; border: 1px solid var(--hairline); padding: 22px 22px 20px; position: relative; overflow: hidden; }
+.occasion-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gold); }
+.occasion-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.occasion-emoji { width: 48px; height: 48px; border-radius: 10px; background: var(--bg-warm); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+.occasion-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; line-height: 1.1; color: var(--ink); }
+.occasion-name-kr { font-size: 12px; color: var(--ink-soft); margin-top: 2px; font-weight: 500; }
+.occasion-outfit { font-size: 14.5px; color: var(--ink-mid); line-height: 1.7; margin-bottom: 10px; }
+.occasion-outfit strong { color: var(--ink); font-weight: 700; }
+.occasion-note { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--hairline); font-weight: 500; letter-spacing: 0.02em; }
+
+/* SHOES & ACCESSORIES */
+.shoes { background: var(--bg-warm); }
+.shoe-grid { max-width: 700px; margin: 0 auto 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.shoe-card { background: var(--paper); border-radius: 10px; border: 1px solid var(--hairline); padding: 18px 16px 16px; text-align: center; }
+.shoe-emoji { font-size: 36px; margin-bottom: 8px; }
+.shoe-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+.shoe-when { font-size: 12px; color: var(--ink-soft); line-height: 1.45; }
+.acc-list { max-width: 700px; margin: 0 auto; background: var(--paper); border-radius: 12px; border: 1px solid var(--hairline); padding: 22px 24px; }
+.acc-list h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; margin-bottom: 16px; }
+.acc-items { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr; gap: 0; }
+.acc-items li { padding: 12px 0; border-bottom: 1px solid var(--hairline); display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.55; }
+.acc-items li:last-child { border-bottom: none; }
+.acc-items li .bullet { color: var(--gold); font-weight: 700; flex-shrink: 0; }
+.acc-items li strong { color: var(--ink); font-weight: 700; }
+
+/* PRO TIPS */
+.tips-section { background: var(--bg); }
+.tip-grid { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 14px; }
+.tip-card { background: var(--paper); border-radius: 12px; border: 1px solid var(--hairline); padding: 22px 22px 20px; }
+.tip-card.warn { background: #FFF4E5; border-color: #E8C089; }
+.tip-head { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.tip-head .pill { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; background: var(--ink); color: var(--bg); padding: 4px 8px; border-radius: 4px; font-weight: 700; }
+.tip-card.warn .tip-head .pill { background: #B86B4B; }
+.tip-body { font-size: 14px; color: var(--ink-mid); line-height: 1.7; }
+.tip-body strong { color: var(--ink); font-weight: 700; }
+.tip-body p + p { margin-top: 10px; }
+
+/* QUOTE */
+.quote-section { padding: 60px 20px; background: var(--ink); text-align: center; color: #E8DFC8; }
+.quote-section .overline { color: var(--gold); margin-bottom: 18px; }
+.quote-section blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 6vw, 30px); font-weight: 500; line-height: 1.35; max-width: 600px; margin: 0 auto 18px; color: #F4EFE8; }
+.quote-section blockquote::before { content: '"'; font-size: 48px; color: var(--gold); display: block; line-height: 0.5; margin-bottom: 12px; }
+.quote-section .author { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+
+/* FOOTER */
+footer { text-align: center; padding: 36px 20px calc(36px + env(safe-area-inset-bottom)); background: #0F0D0A; color: #B8AB8E; }
+footer .brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #F4EFE8; margin-bottom: 6px; font-weight: 600; }
+footer .meta { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; }
+
+@media (min-width: 520px) {
+  .principles { grid-template-columns: repeat(3, 1fr); }
+  .piece-grid { grid-template-columns: repeat(3, 1fr); }
+  .shoe-grid { grid-template-columns: repeat(5, 1fr); }
+  .photo-break { height: 380px; }
+  .hero-image { height: 560px; }
+  .suitcase-body { grid-template-columns: 1fr 1fr; }
+  .suitcase-half.clothes { border-bottom: none; border-right: 1px dashed var(--gold); }
+}
+@media (max-width: 360px) {
+  .hero-overlay { padding: 32px 18px 28px; }
+  section { padding: 50px 16px 40px; }
+  .hero-stats { gap: 8px; }
+  .piece-card { padding: 14px 12px 12px; }
+  .piece-swatch { height: 70px; font-size: 26px; }
+  .piece-name-en { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="#hero">처음</a>
+    <a href="#strategy">전략</a>
+    <a href="#capsule">22장</a>
+    <a href="#suitcase">캐리어</a>
+    <a href="#matchup">조합법</a>
+    <a href="#occasion">상황별</a>
+    <a href="#shoes">신발·소품</a>
+    <a href="#tips">패킹 팁</a>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <img class="hero-image" src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1600&h=1200&fit=crop&q=85" alt="Santorini">
+  <div class="hero-overlay">
+    <div class="kicker">Bella ˙ 벨라 <span class="dot"></span> Cruise Packing Guide</div>
+    <h1>60 Days,<br><span class="accent">22 Pieces.</span></h1>
+    <div class="subtitle">5 크루즈 · 30+ 항구 · 1 캐리어<br>이 가방 하나로 두 달을 산다.</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">60</div><div class="lbl">Days</div></div>
+      <div class="hero-stat"><div class="num">22</div><div class="lbl">Pieces</div></div>
+      <div class="hero-stat"><div class="num">40+</div><div class="lbl">Looks</div></div>
+      <div class="hero-stat"><div class="num">1</div><div class="lbl">Suitcase</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<section class="strategy" id="strategy">
+  <div class="section-head">
+    <div class="overline">The Strategy</div>
+    <h2>왜 <span class="accent">22장</span>이면 충분한가</h2>
+    <div class="subtitle">짐을 줄이는 건 옷을 줄이는 게 아니라, 매칭의 가짓수를 늘리는 일.</div>
+  </div>
+  <div class="principles">
+    <div class="principle">
+      <div class="num">01</div>
+      <h3>3 컬러로 묶는다</h3>
+      <p>화이트·네이비·골드 베이스 + 버건디·코랄 포인트. 모든 옷이 서로 매치되는 컬러 그리드.</p>
+    </div>
+    <div class="principle">
+      <div class="num">02</div>
+      <h3>1 옷 = 다중 룩</h3>
+      <p>흰 셔츠 한 장으로 5룩. 액세서리·이너·아우터 조합으로 같은 옷이 매번 다르게 보인다.</p>
+    </div>
+    <div class="principle">
+      <div class="num">03</div>
+      <h3>특수 1벌 룰</h3>
+      <p>특수 상황(Scarlet Night, 정숙룩, 포멀)마다 딱 1벌. 4번 등판해도 액세서리만 바꾼다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK 1 -->
+<section class="photo-break">
+  <img src="https://images.unsplash.com/photo-1505881502353-a1986add3762?w=1600&h=900&fit=crop&q=85" alt="Ibiza">
+  <div class="photo-break-overlay">
+    <div class="photo-break-text">
+      <div class="overline">The Capsule</div>
+      <h2>The 22-Piece<br>Cruise Wardrobe</h2>
+    </div>
+  </div>
+</section>
+
+<!-- THE 15 PIECES -->
+<section class="capsule" id="capsule">
+  <div class="section-head">
+    <div class="overline">Your Wardrobe</div>
+    <h2>옷장의 <span class="accent">전부</span></h2>
+    <div class="subtitle">아래 22장 + 신발 5켤레가 60일을 완성한다.</div>
+  </div>
+
+  <!-- DRESSES -->
+  <div class="category-group">
+    <div class="category-label"><span class="label-text">👗 DRESSES</span><span class="count">5 장</span></div>
+    <div class="piece-grid">
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #F5D547 0%, #E8C547 100%); color: #fff;">🍋</div>
+        <div class="piece-name-en">Lemon Dress</div>
+        <div class="piece-name-kr">레몬 원피스</div>
+        <div class="piece-uses"><span class="icon">3</span><span class="label">아말피·이비자·산토리니 2차</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: var(--red); color: #fff;">❤️</div>
+        <div class="piece-name-en">Red Dress</div>
+        <div class="piece-name-kr">레드 원피스</div>
+        <div class="piece-uses"><span class="icon">5</span><span class="label">Scarlet ×4 + Vegas</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #E8A4B8 0%, #D88AA0 100%); color: #fff;">🌸</div>
+        <div class="piece-name-en">Pink Dress</div>
+        <div class="piece-name-kr">핑크 원피스</div>
+        <div class="piece-uses"><span class="icon">3</span><span class="label">친퀘테레·푸에르토플라타·디너</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #5BA8B8 0%, #2D5A7B 100%); color: #fff;">💙</div>
+        <div class="piece-name-en">Blue Dress</div>
+        <div class="piece-name-kr">블루 원피스</div>
+        <div class="piece-uses"><span class="icon">4</span><span class="label">미코노스·산토리니·코르푸·나폴리</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: #1A1A1A; color: #fff;">🖤</div>
+        <div class="piece-name-en">Black Dress</div>
+        <div class="piece-name-kr">블랙 원피스</div>
+        <div class="piece-uses"><span class="icon">4</span><span class="label">포멀·디너·NYC·Sphere</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPS -->
+  <div class="category-group">
+    <div class="category-label"><span class="label-text">👕 TOPS &amp; SHIRTS</span><span class="count">5 장</span></div>
+    <div class="piece-grid">
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #BCD9E8 0%, #A8C8DC 100%); color: #fff;">☁️</div>
+        <div class="piece-name-en">Sky Blue Shirt</div>
+        <div class="piece-name-kr">소라색 셔츠</div>
+        <div class="piece-uses"><span class="icon">4</span><span class="label">바르셀로나·하니아·로마</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: repeating-linear-gradient(90deg, #FAFAF6 0px, #FAFAF6 8px, #1B3A5C 8px, #1B3A5C 14px); color: #fff;">⛵</div>
+        <div class="piece-name-en">Stripe Shirt</div>
+        <div class="piece-name-kr">스트라이프 셔츠</div>
+        <div class="piece-uses"><span class="icon">4</span><span class="label">칸·마르세유·승선일</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #FAFAF6 0%, #EFE7D6 100%); color: var(--ink-soft);">👔</div>
+        <div class="piece-name-en">White Shirt</div>
+        <div class="piece-name-kr">화이트 셔츠</div>
+        <div class="piece-uses"><span class="icon">5</span><span class="label">바티칸·이스탄불·다용도</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: #1A1A1A; color: #fff;">👕</div>
+        <div class="piece-name-en">Black Tee</div>
+        <div class="piece-name-kr">블랙 티셔츠</div>
+        <div class="piece-uses"><span class="icon">∞</span><span class="label">매일 이너·캐주얼</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #FAFAF6 0%, #F0E7D6 100%); color: var(--ink-soft);">👕</div>
+        <div class="piece-name-en">White Tee</div>
+        <div class="piece-name-kr">화이트 티셔츠</div>
+        <div class="piece-uses"><span class="icon">∞</span><span class="label">매일 이너·캐주얼</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOMS -->
+  <div class="category-group">
+    <div class="category-label"><span class="label-text">👖 BOTTOMS</span><span class="count">4 장</span></div>
+    <div class="piece-grid">
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #2D5A7B 0%, #1B3A5C 100%); color: #fff;">👖</div>
+        <div class="piece-name-en">Jeans</div>
+        <div class="piece-name-kr">청바지</div>
+        <div class="piece-uses"><span class="icon">5</span><span class="label">이동·도시·NYC</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #6B8AAB 0%, #4A6B8A 100%); color: #fff;">🩳</div>
+        <div class="piece-name-en">Denim Shorts</div>
+        <div class="piece-name-kr">청 반바지</div>
+        <div class="piece-uses"><span class="icon">4</span><span class="label">카리브·풀데이·캐년</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #C9A87C 0%, #8B6F4E 100%); color: #fff;">👖</div>
+        <div class="piece-name-en">Camel Pants</div>
+        <div class="piece-name-kr">카멜 여름 팬츠</div>
+        <div class="piece-uses"><span class="icon">4</span><span class="label">디너·시크 룩·로마</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #FAFAF6 0%, #EFE7D6 100%); color: var(--ink-soft);">👖</div>
+        <div class="piece-name-en">White Pants</div>
+        <div class="piece-name-kr">화이트 여름 팬츠</div>
+        <div class="piece-uses"><span class="icon">5</span><span class="label">승선일·칸·여름 메인</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUTERWEAR -->
+  <div class="category-group">
+    <div class="category-label"><span class="label-text">🧥 OUTERWEAR</span><span class="count">4 장</span></div>
+    <div class="piece-grid">
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #6B8AAB 0%, #2D5A7B 100%); color: #fff;">🧥</div>
+        <div class="piece-name-en">Denim Jacket</div>
+        <div class="piece-name-kr">청자켓</div>
+        <div class="piece-uses"><span class="icon">∞</span><span class="label">바르셀로나·카리브·NYC</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #EFE3CC 0%, #D4C8A8 100%); color: var(--ink-soft);">🧥</div>
+        <div class="piece-name-en">Light Beige Jumper</div>
+        <div class="piece-name-kr">라이트 베이지 점퍼</div>
+        <div class="piece-uses"><span class="icon">∞</span><span class="label">선상 저녁·해풍</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: #1A1A1A; color: #fff;">🖤</div>
+        <div class="piece-name-en">Black Jacket</div>
+        <div class="piece-name-kr">블랙 자켓</div>
+        <div class="piece-uses"><span class="icon">∞</span><span class="label">NYC·Sphere·Vegas 디너</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #C9A87C 0%, #8B6F4E 100%); color: #fff;">🧥</div>
+        <div class="piece-name-en">Trench Coat</div>
+        <div class="piece-name-kr">트렌치 코트</div>
+        <div class="piece-uses"><span class="icon">∞</span><span class="label">5월·뉴욕·비행기</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIVE & SWIM -->
+  <div class="category-group">
+    <div class="category-label"><span class="label-text">🏃 ACTIVE &amp; SWIM</span><span class="count">4 벌</span></div>
+    <div class="piece-grid">
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #6B6055 0%, #3A3329 100%); color: #fff;">🏃</div>
+        <div class="piece-name-en">Activewear</div>
+        <div class="piece-name-kr">운동복 1벌</div>
+        <div class="piece-uses"><span class="icon">∞</span><span class="label">크루즈 짐·요가·산책</span></div>
+      </div>
+      <div class="piece-card">
+        <div class="piece-swatch" style="background: linear-gradient(135deg, #5BA8B8 0%, #2D5A7B 100%); color: #fff;">👙</div>
+        <div class="piece-name-en">Swimwear ×3</div>
+        <div class="piece-name-kr">수영복 3개 (변주)</div>
+        <div class="piece-uses"><span class="icon">∞</span><span class="label">풀데이·비치·카리브</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUITCASE 50/50 -->
+<section class="suitcase-sec" id="suitcase">
+  <div class="section-head">
+    <div class="overline">The 50/50 Rule</div>
+    <h2>캐리어 <span class="accent">절반</span> 룰</h2>
+    <div class="subtitle">캐리어 위쪽 반은 옷, 아래쪽 반은 신발 · 가방 · 화장품.<br>이렇게 나누지 않으면 23kg 못 맞춰요.</div>
+  </div>
+
+  <div class="suitcase">
+    <div class="suitcase-handle"></div>
+    <div class="suitcase-body">
+      <div class="suitcase-half clothes">
+        <div class="half-label">
+          <div class="half-num">50%</div>
+          <div class="half-title">
+            <h3>The Clothes Half</h3>
+            <div class="sub">옷 (압축팩·롤링)</div>
+          </div>
+        </div>
+        <ul class="half-list">
+          <li><span class="emo">👗</span><div><strong>드레스 4장</strong> (레몬·핑크·블루·블랙) — 롤링</div></li>
+          <li><span class="emo">👕</span><div><strong>셔츠 3장</strong> (소라·스트라이프·화이트) + <strong>티셔츠 2장</strong></div></li>
+          <li><span class="emo">👖</span><div><strong>바텀 3장</strong> (청 반바지·카멜·화이트 팬츠) — 압축팩</div></li>
+          <li><span class="emo">🧥</span><div><strong>아우터 3장</strong> (라이트 베이지·블랙·청자켓 중 1개는 기내)</div></li>
+          <li><span class="emo">🏃</span><div><strong>운동복 1벌</strong> — 압축팩</div></li>
+          <li><span class="emo">👙</span><div><strong>수영복 3개</strong> — 압축팩 (부피 거의 0)</div></li>
+          <li><span class="emo">🩲</span><div><strong>속옷·양말 60일치</strong> — 압축팩 (신발 안에 채움)</div></li>
+        </ul>
+      </div>
+      <div class="suitcase-half other">
+        <div class="half-label">
+          <div class="half-num">50%</div>
+          <div class="half-title">
+            <h3>The Everything Else</h3>
+            <div class="sub">신발 · 가방 · 화장품 · 소품</div>
+          </div>
+        </div>
+        <ul class="half-list">
+          <li><span class="emo">👟</span><div><strong>신발 4켤레</strong> (운동화 1켤레는 신고 감) — 신발주머니</div></li>
+          <li><span class="emo">👜</span><div><strong>가방 2개</strong> (크로스백·토트백) — 접어서</div></li>
+          <li><span class="emo">🧢</span><div><strong>모자</strong> (밀짚모자·캡) — 속옷으로 채워 형태 유지</div></li>
+          <li><span class="emo">💄</span><div><strong>화장품 풀세트</strong> — 트래블 사이즈 + 마스크팩 30</div></li>
+          <li><span class="emo">💊</span><div><strong>영양제 9주치</strong> + 상비약 — 필박스 소분</div></li>
+          <li><span class="emo">🩸</span><div><strong>여성용품 3주기 분</strong></div></li>
+          <li><span class="emo">📱</span><div><strong>콘텐츠 장비</strong> (카메라·짐벌·어댑터 등)</div></li>
+          <li><span class="emo">🍜</span><div><strong>한국 음식</strong> (라면·즉석밥·고추장 튜브)</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="worn-on-plane">
+    <div class="worn-head">
+      <div class="worn-emoji">✈️</div>
+      <div>
+        <h3>이건 비행기에서 입고 가요</h3>
+        <div class="worn-sub">캐리어에 넣지 마세요 — 부피 큰 것은 입거나 들기</div>
+      </div>
+    </div>
+    <ul class="worn-list">
+      <li>트렌치 코트</li>
+      <li>레드 원피스 (or 무거운 1벌)</li>
+      <li>청바지</li>
+      <li>화이트 셔츠</li>
+      <li>블랙 티셔츠 (이너)</li>
+      <li>뉴발란스 운동화</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PHOTO BREAK 2 -->
+<section class="photo-break">
+  <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&h=900&fit=crop&q=85" alt="Cruise at sea">
+  <div class="photo-break-overlay">
+    <div class="photo-break-text">
+      <div class="overline">Mix & Match</div>
+      <h2>1 옷, <br>여러 룩.</h2>
+    </div>
+  </div>
+</section>
+
+<!-- MIX & MATCH -->
+<section class="matchup" id="matchup">
+  <div class="section-head">
+    <div class="overline">The Combinations</div>
+    <h2>옷 하나로 <span class="accent">N개</span>의 룩</h2>
+    <div class="subtitle">같은 옷, 다른 매칭. 이게 캡슐 워드로브의 마법.</div>
+  </div>
+
+  <div class="match-list">
+    <div class="match-card">
+      <div class="match-header">
+        <div class="match-icon" style="background: linear-gradient(135deg, #5BA8B8 0%, #2D5A7B 100%); color: #fff;">💙</div>
+        <div class="match-title">
+          <h3>Blue Dress</h3>
+          <div class="sub">블루 원피스 · 지중해의 여왕</div>
+        </div>
+        <div class="match-count-big">4<small>looks</small></div>
+      </div>
+      <div class="combos">
+        <div class="combo"><span class="combo-num">1</span><span class="combo-text">+ 큰 밀짚모자 + 골드 귀걸이 → <strong>산토리니 블루돔</strong></span></div>
+        <div class="combo"><span class="combo-num">2</span><span class="combo-text">+ 가죽 샌들 + 크로스백 → <strong>미코노스 풍차</strong></span></div>
+        <div class="combo"><span class="combo-num">3</span><span class="combo-text">+ 라이트 베이지 점퍼 → <strong>선상 저녁</strong></span></div>
+        <div class="combo"><span class="combo-num">4</span><span class="combo-text">+ 청자켓 + 스니커즈 → <strong>코르푸·하니아 캐주얼</strong></span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-header">
+        <div class="match-icon" style="background: var(--red); color: #fff;">❤️</div>
+        <div class="match-title">
+          <h3>Red Dress</h3>
+          <div class="sub">레드 원피스 · 60일 5회 등판</div>
+        </div>
+        <div class="match-count-big">5<small>uses</small></div>
+      </div>
+      <div class="combos">
+        <div class="combo"><span class="combo-num">1</span><span class="combo-text"><strong>Valiant Lady</strong> Scarlet Night #1 (5월말)</span></div>
+        <div class="combo"><span class="combo-num">2</span><span class="combo-text"><strong>Scarlet Lady 1차</strong> Scarlet Night #2 (6월 중)</span></div>
+        <div class="combo"><span class="combo-num">3</span><span class="combo-text"><strong>Scarlet Lady 2차</strong> Scarlet Night #3 (6월말)</span></div>
+        <div class="combo"><span class="combo-num">4</span><span class="combo-text"><strong>Resilient Lady</strong> Scarlet Night #4 (7월 초)</span></div>
+        <div class="combo"><span class="combo-num">5</span><span class="combo-text"><strong>Vegas 디너쇼</strong> 마지막 등판 · 풀 글램</span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-header">
+        <div class="match-icon" style="background: linear-gradient(135deg, #F5D547 0%, #E8C547 100%); color: #fff;">🍋</div>
+        <div class="match-title">
+          <h3>Lemon Dress</h3>
+          <div class="sub">레몬 원피스 · 햇살 시그니처</div>
+        </div>
+        <div class="match-count-big">3<small>looks</small></div>
+      </div>
+      <div class="combos">
+        <div class="combo"><span class="combo-num">1</span><span class="combo-text">+ 밀짚모자 + 가죽 샌들 → <strong>아말피 코스트 ⭐</strong></span></div>
+        <div class="combo"><span class="combo-num">2</span><span class="combo-text">+ 라이트 베이지 점퍼 → <strong>이비자 사양</strong></span></div>
+        <div class="combo"><span class="combo-num">3</span><span class="combo-text">+ 골드 액세서리 + 플랫 → <strong>산토리니 2차</strong></span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-header">
+        <div class="match-icon" style="background: linear-gradient(135deg, #FAFAF6 0%, #EFE7D6 100%);">👔</div>
+        <div class="match-title">
+          <h3>White Shirt</h3>
+          <div class="sub">화이트 셔츠 · 일꾼</div>
+        </div>
+        <div class="match-count-big">5<small>looks</small></div>
+      </div>
+      <div class="combos">
+        <div class="combo"><span class="combo-num">1</span><span class="combo-text">+ 화이트 팬츠 → <strong>승선일·이동</strong></span></div>
+        <div class="combo"><span class="combo-num">2</span><span class="combo-text">+ 청바지 + 트렌치 → <strong>로마·뉴욕</strong></span></div>
+        <div class="combo"><span class="combo-num">3</span><span class="combo-text">+ 청 반바지 → <strong>카리브·코르푸</strong></span></div>
+        <div class="combo"><span class="combo-num">4</span><span class="combo-text">+ 카멜 팬츠 → <strong>디너 시크</strong></span></div>
+        <div class="combo"><span class="combo-num">5</span><span class="combo-text">단추 풀어 묶고 비키니 위 → <strong>풀 커버업</strong></span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-header">
+        <div class="match-icon" style="background: linear-gradient(135deg, #2D5A7B 0%, #1B3A5C 100%); color: #fff;">👖</div>
+        <div class="match-title">
+          <h3>Jeans</h3>
+          <div class="sub">청바지 · 만능 아이템</div>
+        </div>
+        <div class="match-count-big">5<small>looks</small></div>
+      </div>
+      <div class="combos">
+        <div class="combo"><span class="combo-num">1</span><span class="combo-text">+ 화이트 셔츠 + 트렌치 → <strong>로마 도착</strong></span></div>
+        <div class="combo"><span class="combo-num">2</span><span class="combo-text">+ 소라 셔츠 → <strong>고딕 지구·하니아</strong></span></div>
+        <div class="combo"><span class="combo-num">3</span><span class="combo-text">+ 블랙 티 + 청자켓 → <strong>브루클린 야경</strong></span></div>
+        <div class="combo"><span class="combo-num">4</span><span class="combo-text">+ 화이트 티 + 라이트 베이지 점퍼 → <strong>그랜드 캐년</strong></span></div>
+        <div class="combo"><span class="combo-num">5</span><span class="combo-text">+ 스트라이프 셔츠 → <strong>마르세유</strong></span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-header">
+        <div class="match-icon" style="background: linear-gradient(135deg, #C9A87C 0%, #8B6F4E 100%); color: #fff;">🧥</div>
+        <div class="match-title">
+          <h3>Trench Coat</h3>
+          <div class="sub">트렌치 · 60일 챔피언</div>
+        </div>
+        <div class="match-count-big">∞<small>uses</small></div>
+      </div>
+      <div class="combos">
+        <div class="combo"><span class="combo-num">1</span><span class="combo-text">5월 이탈리아 (쌀쌀한 아침저녁)</span></div>
+        <div class="combo"><span class="combo-num">2</span><span class="combo-text">6월 지중해 디너 (해풍 막기)</span></div>
+        <div class="combo"><span class="combo-num">3</span><span class="combo-text">7월 뉴욕 (실내 에어컨)</span></div>
+        <div class="combo"><span class="combo-num">4</span><span class="combo-text">비행기 안 (담요 대신)</span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-header">
+        <div class="match-icon" style="background: var(--gold); color: #fff;">✨</div>
+        <div class="match-title">
+          <h3>골드 액세서리 세트</h3>
+          <div class="sub">같은 옷도 새 룩으로</div>
+        </div>
+        <div class="match-count-big">∞<small>변주</small></div>
+      </div>
+      <div class="combos">
+        <div class="combo"><span class="combo-num">·</span><span class="combo-text">큰 귀걸이 → 화보 클로즈업</span></div>
+        <div class="combo"><span class="combo-num">·</span><span class="combo-text">레이어드 목걸이 → 보호 시크</span></div>
+        <div class="combo"><span class="combo-num">·</span><span class="combo-text">팔찌 스택 → 포즈에 동선</span></div>
+        <div class="combo"><span class="combo-num">·</span><span class="combo-text">얇은 벨트 → 실루엣 변경</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OCCASION -->
+<section class="occasion" id="occasion">
+  <div class="section-head">
+    <div class="overline">By Occasion</div>
+    <h2>상황별 <span class="accent">정답</span> 코디</h2>
+    <div class="subtitle">언제 뭘 입을지 미리 정해 두면 패킹이 명확해진다.</div>
+  </div>
+
+  <div class="occasion-grid">
+    <div class="occasion-card">
+      <div class="occasion-head">
+        <div class="occasion-emoji">✈️</div>
+        <div>
+          <div class="occasion-name">Transit</div>
+          <div class="occasion-name-kr">비행기·이동복</div>
+        </div>
+      </div>
+      <div class="occasion-outfit"><strong>화이트 린넨 셔츠 + 와이드 팬츠 + 스니커즈.</strong> 트렌치는 손에 들고. 큰 스카프는 담요로.</div>
+      <div class="occasion-note">12시간+ 장거리 = 편함 우선 / 도착 후 바로 호텔 가능한 룩</div>
+    </div>
+
+    <div class="occasion-card">
+      <div class="occasion-head">
+        <div class="occasion-emoji">🏛️</div>
+        <div>
+          <div class="occasion-name">City Touring</div>
+          <div class="occasion-name-kr">도심 관광</div>
+        </div>
+      </div>
+      <div class="occasion-outfit"><strong>미디 원피스 (버건디·테라코타·코랄) + 가죽 워킹 샌들 + 크로스백.</strong> 골드 액세서리로 포인트.</div>
+      <div class="occasion-note">자갈길·돌계단 = 굽 X / 양손 자유로운 크로스백 = 소매치기 안전</div>
+    </div>
+
+    <div class="occasion-card">
+      <div class="occasion-head">
+        <div class="occasion-emoji">⛪</div>
+        <div>
+          <div class="occasion-name">Modesty Mode</div>
+          <div class="occasion-name-kr">정숙룩 (모스크·바티칸·성당)</div>
+        </div>
+      </div>
+      <div class="occasion-outfit"><strong>긴팔 셔츠 + 롱 미디 스커트 + 큰 스카프.</strong> 어깨·무릎·머리 가림 가능.</div>
+      <div class="occasion-note">⚠️ 이스탄불 블루모스크·아야소피아·바티칸·사그라다 = 정숙룩 필수</div>
+    </div>
+
+    <div class="occasion-card">
+      <div class="occasion-head">
+        <div class="occasion-emoji">🏖️</div>
+        <div>
+          <div class="occasion-name">Beach &amp; Pool</div>
+          <div class="occasion-name-kr">비치·풀데이</div>
+        </div>
+      </div>
+      <div class="occasion-outfit"><strong>비키니/원피스 수영복 + 화이트 크로셰 커버업 + 가죽 슬라이드 + 큰 선글라스 + 끈 있는 밀짚모자.</strong></div>
+      <div class="occasion-note">바람 강한 곳 (미코노스·산토리니) = 모자 끈 필수 / 카리브·이비자 핵심</div>
+    </div>
+
+    <div class="occasion-card">
+      <div class="occasion-head">
+        <div class="occasion-emoji">🍷</div>
+        <div>
+          <div class="occasion-name">Dinner Casual</div>
+          <div class="occasion-name-kr">디너 (스마트 캐주얼)</div>
+        </div>
+      </div>
+      <div class="occasion-outfit"><strong>네이비 미디 린넨 원피스 + 골드 액세서리 + 굽 있는 샌들.</strong> 또는 화이트 와이드 팬츠 + 실크 블라우스.</div>
+      <div class="occasion-note">크루즈 메인 다이닝·로마 트라스테베레·바르셀로나 타파스</div>
+    </div>
+
+    <div class="occasion-card">
+      <div class="occasion-head">
+        <div class="occasion-emoji">🎩</div>
+        <div>
+          <div class="occasion-name">Formal Night</div>
+          <div class="occasion-name-kr">Royal 포멀 나잇</div>
+        </div>
+      </div>
+      <div class="occasion-outfit"><strong>블랙 칵테일 드레스 + 굽 있는 샌들 + 골드 액세서리 풀세트.</strong> 머리는 업스타일.</div>
+      <div class="occasion-note">Royal Caribbean Harmony 6.13 토 · Vegas 디너쇼 7.15</div>
+    </div>
+
+    <div class="occasion-card">
+      <div class="occasion-head">
+        <div class="occasion-emoji">❤️</div>
+        <div>
+          <div class="occasion-name">Scarlet Night</div>
+          <div class="occasion-name-kr">버진 시그니처 (×4회)</div>
+        </div>
+      </div>
+      <div class="occasion-outfit"><strong>레드 드레스 + 굽 샌들 + 골드 액세서리 + 풀 글램.</strong> 매번 다른 헤어·액세서리로 변주.</div>
+      <div class="occasion-note">Valiant Lady #1 → Scarlet Lady #2·#3 → Resilient Lady #4 / 인스타 메인 콘텐츠</div>
+    </div>
+
+    <div class="occasion-card">
+      <div class="occasion-head">
+        <div class="occasion-emoji">🥾</div>
+        <div>
+          <div class="occasion-name">Active Day</div>
+          <div class="occasion-name-kr">액티비티 (성벽·계단·등반)</div>
+        </div>
+      </div>
+      <div class="occasion-outfit"><strong>베이지 점프수트 or 청바지 + 면 티 + 스니커즈 + 캡모자.</strong> 양손 자유로운 크로스백.</div>
+      <div class="occasion-note">두브로브니크 성벽 1.9km · 코토르 1355계단 · 그랜드 캐년</div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOES & ACCESSORIES -->
+<section class="shoes" id="shoes">
+  <div class="section-head">
+    <div class="overline">Shoes &amp; Accessories</div>
+    <h2>신발 <span class="accent">5켤레</span> + 핵심 소품</h2>
+    <div class="subtitle">신발은 자리를 많이 차지하니까 진짜 필요한 것만.</div>
+  </div>
+
+  <div class="shoe-grid">
+    <div class="shoe-card">
+      <div class="shoe-emoji">👟</div>
+      <div class="shoe-name">뉴발란스</div>
+      <div class="shoe-when">매일 메인 · 워킹 · 비행기 착용</div>
+    </div>
+    <div class="shoe-card">
+      <div class="shoe-emoji">🥿</div>
+      <div class="shoe-name">다크 브라운 플랫</div>
+      <div class="shoe-when">바티칸·드레시 캐주얼</div>
+    </div>
+    <div class="shoe-card">
+      <div class="shoe-emoji">🩴</div>
+      <div class="shoe-name">슬리퍼</div>
+      <div class="shoe-when">풀데이·비치·카바나·객실</div>
+    </div>
+    <div class="shoe-card">
+      <div class="shoe-emoji">👠</div>
+      <div class="shoe-name">높은 샌들</div>
+      <div class="shoe-when">디너·Scarlet Night·포멀</div>
+    </div>
+    <div class="shoe-card" style="border: 2px solid var(--gold);">
+      <div class="shoe-emoji">👡</div>
+      <div class="shoe-name">+ 가죽 워킹 샌들</div>
+      <div class="shoe-when"><strong style="color:var(--gold);">추천</strong> · 자갈길 + 미디 원피스</div>
+    </div>
+  </div>
+
+  <div class="acc-list">
+    <h3>핵심 소품 8가지</h3>
+    <ul class="acc-items">
+      <li><span class="bullet">▸</span><div><strong>큰 밀짚모자 (끈 있는 거!)</strong> — 산토리니·미코노스 바람 강함. 끈 없으면 바다행.</div></li>
+      <li><span class="bullet">▸</span><div><strong>큰 스카프 × 2</strong> — 1장은 모스크·바티칸 정숙용, 1장은 컬러 액세서리용.</div></li>
+      <li><span class="bullet">▸</span><div><strong>선글라스 × 2</strong> — 1개 분실 대비. 60일 중 한 번은 떨어뜨림.</div></li>
+      <li><span class="bullet">▸</span><div><strong>골드 액세서리 풀세트</strong> — 귀걸이·목걸이·팔찌·반지. 같은 옷도 새 룩.</div></li>
+      <li><span class="bullet">▸</span><div><strong>크로스백 (작은 거)</strong> — 소매치기 안전. 자갈길 양손 자유.</div></li>
+      <li><span class="bullet">▸</span><div><strong>가죽 토트백</strong> — 비치·쇼핑·기내 휴대.</div></li>
+      <li><span class="bullet">▸</span><div><strong>가죽 벨트 (얇은 거)</strong> — 와이드 팬츠 + 원피스 실루엣 변경용.</div></li>
+      <li><span class="bullet">▸</span><div><strong>캡/버킷햇</strong> — 그랜드 캐년·트레킹·캐주얼 데이.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRO TIPS -->
+<section class="tips-section" id="tips">
+  <div class="section-head">
+    <div class="overline">Pro Tips</div>
+    <h2>패킹 <span class="accent">실전</span> 팁</h2>
+    <div class="subtitle">짐 싸기 전 꼭 알아야 할 60일 노하우.</div>
+  </div>
+
+  <div class="tip-grid">
+    <div class="tip-card warn">
+      <div class="tip-head">🧺 세탁 전략 <span class="pill">중요</span></div>
+      <div class="tip-body">
+        <p><strong>Virgin Voyages는 셀프 세탁 없음.</strong> 객실에 다림질 X, 무료 스티머만 2시간 대여.</p>
+        <p><strong>유료 세탁 ($30/가방, 또는 1벌당 $5–9):</strong> Sailing Club Deep Blue/Blue Extras 회원은 1가방 무료.</p>
+        <p><strong>실전 계획:</strong> 5.31~6.7 바르셀로나 6박에서 1차 빨래 / 6.24 이스탄불 도착 후 2차 / 7.11 베가스 도착 후 3차. 총 3번이면 60일 OK.</p>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-head">🧳 가방 구성 <span class="pill">필수</span></div>
+      <div class="tip-body">
+        <p><strong>① 메인 캐리어 (23kg 위탁)</strong> — 옷 대부분 + 신발 4켤레.</p>
+        <p><strong>② 기내용 백팩 or 캐리어</strong> — 노트북·여권·약·1일치 옷·콘텐츠 장비 (짐 분실 대비).</p>
+        <p><strong>③ 접이식 더플 (캐리어 안에 빈 채로)</strong> — 베가스에서 쇼핑 후 짐 늘 때 꺼냄.</p>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-head">📦 압축·롤링 <span class="pill">공간</span></div>
+      <div class="tip-body">
+        <p><strong>롤링 (Roll, not fold):</strong> 옷을 말면 부피 30% 감소. 주름도 적음.</p>
+        <p><strong>압축팩:</strong> 다이소 진공팩 5장. 비키니·속옷·양말은 압축팩에. 부피 50% 감소.</p>
+        <p><strong>신발은 신발주머니 + 양말·속옷으로 내부 채움.</strong> 공간 낭비 X.</p>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-head">⚖️ 무게 분산 <span class="pill">팁</span></div>
+      <div class="tip-body">
+        <p>무거운 것 (책·신발) = <strong>바퀴 쪽 아래</strong>. 가벼운 것 (옷) = 위.</p>
+        <p>여행 휴대용 저울 1개 챙겨서 출발 전·중간에 무게 체크. 23kg 초과 시 초과 수하물료 폭탄.</p>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-head">🌍 멀티플러그 <span class="pill">전원</span></div>
+      <div class="tip-body">
+        <p>유럽 (이탈리아·스페인·그리스·튀르키예·프랑스·크로아티아·몬테네그로) = <strong>C/F타입</strong>.</p>
+        <p>미국 (뉴욕·마이애미·베가스) = <strong>A타입</strong>. 만능 어댑터 2개 필수.</p>
+        <p>⚠️ 멀티탭은 크루즈 선상 반입 금지. (안전 규정)</p>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-head">🧴 화장품 분리 <span class="pill">소분</span></div>
+      <div class="tip-body">
+        <p>스킨케어는 100ml 이하 트래블 사이즈로 소분. 액체는 지퍼백에 따로.</p>
+        <p>마스크팩·시트팩은 60일 ÷ 2 = 30장. 부피 작아서 OK.</p>
+        <p>샴푸·바디워시는 안 챙김 — 크루즈·호텔에 다 있음.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+  <div class="overline">Bella's Philosophy</div>
+  <blockquote>짐을 줄이면 여정이 가벼워진다.<br>비우는 것이 곧 자유.</blockquote>
+  <div class="author">— 비우는 삶 · Cruise Nomad</div>
+</section>
+
+<footer>
+  <div class="brand">60 Days, 15 Pieces</div>
+  <div class="meta">5.19 → 7.17 · 60 Days · 5 Cruises · 1 Suitcase</div>
+</footer>
+
+<script>
+// FIX: explicit smooth scroll for sticky nav offset
+document.querySelectorAll('.topnav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    const navHeight = document.querySelector('.topnav').offsetHeight;
+    const targetY = target.getBoundingClientRect().top + window.scrollY - navHeight - 10;
+    window.scrollTo({ top: targetY, behavior: 'smooth' });
+  });
+});
+
+// Active section indicator
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.topnav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    const top = s.offsetTop - 120;
+    if (window.scrollY >= top) current = s.id;
+  });
+  navLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>
